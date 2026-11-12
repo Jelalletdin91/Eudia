@@ -49,7 +49,6 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
-  animation: page-in .6s var(--ease) both;
 }
 
 body.menu-open { overflow: hidden; }
@@ -228,9 +227,7 @@ p { margin: 0; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, .94);
-  -webkit-backdrop-filter: saturate(1.4) blur(10px);
-  backdrop-filter: saturate(1.4) blur(10px);
+  background: #fff;
   border-bottom: 1px solid var(--line);
   transition: box-shadow .3s var(--ease);
 }
@@ -242,9 +239,7 @@ p { margin: 0; }
   justify-content: space-between;
   gap: 24px;
   height: var(--header-h);
-  transition: height .3s var(--ease);
 }
-.site-header.is-scrolled .header__inner { height: 68px; }
 
 .brand {
   display: flex;
@@ -258,10 +253,9 @@ p { margin: 0; }
   height: 52px;
   border-radius: 10px;
   object-fit: cover;
-  transition: transform .4s var(--ease), width .3s, height .3s;
+  transition: transform .4s var(--ease);
 }
 .brand:hover .brand__logo { transform: rotate(-4deg) scale(1.04); }
-.site-header.is-scrolled .brand__logo { width: 44px; height: 44px; }
 .brand__text { display: flex; flex-direction: column; gap: 2px; }
 .brand__name {
   font-family: var(--font-serif);
@@ -450,12 +444,9 @@ p { margin: 0; }
   fill: none;
   stroke: rgba(255, 255, 255, .16);
   stroke-width: 2;
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-  animation: draw 2.4s var(--ease) forwards;
 }
-.deco-arcs path:nth-child(2) { animation-delay: .25s; stroke: rgba(255, 255, 255, .1); }
-.deco-arcs path:nth-child(3) { animation-delay: .5s; stroke: rgba(227, 178, 60, .35); }
+.deco-arcs path:nth-child(2) { stroke: rgba(255, 255, 255, .1); }
+.deco-arcs path:nth-child(3) { stroke: rgba(227, 178, 60, .35); }
 
 /* ---------- 8. Kartlar ---------- */
 .card {
@@ -592,12 +583,6 @@ p { margin: 0; }
   gap: 8px;
 }
 .stars svg { width: 16px; height: 16px; fill: var(--gold); }
-.stars--twinkle svg { animation: twinkle 3.2s ease-in-out infinite; }
-.stars--twinkle svg:nth-child(2) { animation-delay: .3s; }
-.stars--twinkle svg:nth-child(3) { animation-delay: .6s; }
-.stars--twinkle svg:nth-child(4) { animation-delay: .9s; }
-.stars--twinkle svg:nth-child(5) { animation-delay: 1.2s; }
-.stars--twinkle svg:nth-child(6) { animation-delay: 1.5s; }
 
 /* ---------- 11. Alt bilgi (footer) ---------- */
 .site-footer { background: #071538; color: #C9D4EC; padding: 72px 0 32px; }
@@ -692,7 +677,7 @@ p { margin: 0; }
 .js .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity .8s var(--ease), transform .8s var(--ease);
+  transition: opacity .6s var(--ease), transform .6s var(--ease);
   transition-delay: var(--d, 0ms);
 }
 .js .reveal--left { transform: translateX(-36px); }

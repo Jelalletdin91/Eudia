@@ -96,3 +96,6 @@
 .gov-table td:last-child { font-family: var(--font-serif); font-size: 19px; font-weight: 600; color: var(--navy); }
 
 .gov-note { margin-top: 18px; font-size: 15px; color: var(--muted); }
+
+/* Portre fotoğrafları: yüzü üstte tut */
+.board-card__photo img { object-position: center 15%; }

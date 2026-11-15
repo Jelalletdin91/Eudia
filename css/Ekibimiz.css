@@ -44,3 +44,6 @@
   line-height: 1.7;
   color: var(--text);
 }
+
+/* Portre fotoğrafları: yüzü üstte tut */
+.team-card__photo img { object-position: center 18%; }

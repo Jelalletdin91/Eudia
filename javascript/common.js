@@ -1,5 +1,5 @@
 /* =========================================================
-   EUDİA Brussels — Ortak betik (tüm sayfalarda yüklenir)
+   EUDIA Brussels — Ortak betik (tüm sayfalarda yüklenir)
    ========================================================= */
 
 /*
@@ -78,7 +78,7 @@ const JOIN_FORM_URL = '';
         toggle.focus();
       }
     });
-    window.matchMedia('(min-width: 1181px)').addEventListener('change', (e) => {
+    window.matchMedia('(min-width: 1025px)').addEventListener('change', (e) => {
       if (e.matches) setMenu(false);
     });
   }

@@ -131,7 +131,9 @@ html { scroll-padding-top: calc(var(--header-h) + 96px); }
 .visit:nth-child(even) { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
 .visit:nth-child(even) .visit__photo { order: 2; }
 
-.visit__photo { border-radius: 0; min-height: 360px; height: 100%; }
+/* Tüm ziyaret fotoğrafları aynı boyutta: metin uzunluğundan bağımsız */
+.visit { align-items: start; }
+.visit__photo { border-radius: 0; height: 440px; }
 .visit__photo img { object-position: center 30%; }
 
 .visit__body { display: flex; flex-direction: column; gap: 14px; padding: 40px 44px; }
@@ -175,6 +177,6 @@ html { scroll-padding-top: calc(var(--header-h) + 96px); }
   .visit,
   .visit:nth-child(even) { grid-template-columns: 1fr; }
   .visit:nth-child(even) .visit__photo { order: 0; }
-  .visit__photo { min-height: 0; aspect-ratio: 4 / 3; }
+  .visit__photo { height: auto; aspect-ratio: 4 / 3; }
   .visit__body { padding: 28px 24px 32px; }
 }
